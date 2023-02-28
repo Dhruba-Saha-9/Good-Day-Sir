@@ -1,11 +1,17 @@
 import time
+name=input("Enter your name : ")
 timestamp = time.strftime("%H:%M:%S")
+h=int(time.strftime("%H"))
 print(timestamp)
-if int(time.strftime("%H")) >= 21 and int(time.strftime("%H")) < 4:
-    print("Good Night Sir")
-elif int(time.strftime("%H")) >= 4 and int(time.strftime("%H")) < 12:
-    print ("Good Morning Sir")
-elif int(time.strftime("%H")) >= 12 and int(time.strftime("%H")) < 16:
-    print ("Good Afternoon Sir")
+
+if h >= 4 and h < 12:
+    print ("Good Morning Sir", name)
+elif h >= 12 and h < 16:
+    print("Good Afternoon Sir", name)
+elif h >= 16 and h < 21:
+    print("Good Evening Sir", name)
 else:
-    print ("Good Evening Sir")
+    print("Good Night Sir", name)
+
+
+
